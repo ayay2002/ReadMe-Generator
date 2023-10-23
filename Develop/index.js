@@ -6,10 +6,10 @@ const fs = require('fs');
 const generateReadme = ({title, description, install, usage, picture}) =>
 ` 
 <h1>${title}</h1>
-<h2>${description}</h2>
-<h2>${install}</h2>
-<h2>${usage}</h2>
-<img>${picture}</img>
+${description}
+${install}
+${usage}
+${picture}
 `
 ;
 inquirer
