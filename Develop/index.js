@@ -10,7 +10,7 @@ const generateReadme = ({title, description, install, usage, picture, license, c
 <h2>Table Of Contents</h2>\n
 <a href='#install'>Install</a>\n
 <a href='#usage'>Usage</a>\n
-<a href = '#image'>Image</a>\n
+<a href = 'image'>Image</a>\n
 <a href = '#license'>License</a>\n
 <a href = '#contributions'>Contributions</a>\n
 <a href = '#tests'>Tests</a>\n
@@ -18,7 +18,7 @@ const generateReadme = ({title, description, install, usage, picture, license, c
 \n
 <h2 id='install'>Installation</h2>\n${install}\n
 <h2 id='usage'>Usage</h2>${usage}\n
-<nav id='image'>![image](${picture})</nav>\n
+![image](${picture})\n
 <h2 id='license'>License</h2>${license}\n
 <h2 id='contributions'>Contributions</h2>${credits}
 <h2 id='tests'>Tests</h2>${test}\n
