@@ -3,21 +3,30 @@ const inquirer = require('inquirer')
 const fs = require('fs');
 // TODO: Create an array of questions for user input
 // const questions = [];
-const generateReadme = ({title, description, contents, install, usage, picture, license, credits, test, questions, username, email}) =>
+const generateReadme = ({title, description, install, usage, picture, license, credits, test, questions, username, email}) =>
 ` 
 <h1>${title}</h1>\n
 <h2>Description</h2>\n${description}\n
-<h2>Table Of Contents</h2>\n${contents}\n
-<h2>Installation</h2>\n${install}\n
-<h2>Usage</h2>${usage}\n
-<h2>Image</h2>${picture}\n
-<h2>License</h2>${license}\n
-<h2>Contributions</h2>${credits}
-<h2>Tests</h2>${test}\n
-<h2>Questions</h2>${questions}\n
-Github: ${username}\n
+<h2>Table Of Contents</h2>\n
+<a href='#install'>Install</a>\n
+<a href='#usage'>Usage</a>\n
+<a href = '#image'>Image</a>\n
+<a href = '#license'>License</a>\n
+<a href = '#contributions'>Contributions</a>\n
+<a href = '#tests'>Tests</a>\n
+<a href='#questions'>Questions</a>\n
+\n
+<h2 id='install'>Installation</h2>\n${install}\n
+<h2 id='usage'>Usage</h2>${usage}\n
+<nav id='image'>![image](${picture})</nav>\n
+<h2 id='license'>License</h2>${license}\n
+<h2 id='contributions'>Contributions</h2>${credits}
+<h2 id='tests'>Tests</h2>${test}\n
+<h2 id='questions'>Questions</h2>${questions}\n
+Find me on Github: @${username}\n
 https://github.com/${username}\n
-Email: ${email}
+Email: ${email}\n
+If you have any questions regarding this project please contact me at the above listed email and i will get back to you as soon as possible! Thank you.
 `
 ;
 inquirer
@@ -32,11 +41,11 @@ inquirer
         name: 'description',
         message: 'Provide a description of your project.'
     },
-    {
-        type: 'input',
-        name: 'contents',
-        message: 'Prodide a table of contents to your read me.'
-    },
+    // {
+    //     type: 'input',
+    //     name: 'contents',
+    //     message: 'Prodide a table of contents to your read me.'
+    // },
     {
         type: 'input',
         name: 'install',
@@ -50,7 +59,7 @@ inquirer
     {
         type: 'input',
         name: 'picture',
-        message: 'Provide a picture for your readme by doing the following\n 1)locating the picture in your folder of this project\n 2)Paste the image into the description of an issue\n 3)Take the new link and pasting it here.'
+        message: 'Provide a picture for your readme by doing the following\n 1)Save the picture in your project repo\n 2)Open the image in github\n 3)Right click the image and select copy image adress to paste it here.'
     },
     {
         type: 'input',
