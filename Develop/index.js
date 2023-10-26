@@ -1,12 +1,13 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer')
 const fs = require('fs');
+const generateReadme = require('./utils/generateMarkdown')
 
 const licenses = ['BSD','MIT','GPL','None']
 // TODO: Create an array of questions for user input
 // all the below prompts are the user questions asked in the terminal
-const questions = [inquirer
-    .prompt([
+const questions =
+    [
         {
             type: 'input',
             name: 'title',
@@ -63,22 +64,25 @@ const questions = [inquirer
             name: 'email',
             message: 'What is your email address?'
         }
-    ])];
+    ];
 
 // TODO: Create a function to write README file
-questions.then((answers) => {
-    const pagecontent = generateReadme(answers);
+// questions.then((answers) => {
+//     const pagecontent = generateReadme(answers);
 
-    fs.writeFile('README.md', pagecontent, (err) => 
-    err ? console.log(err) : console.log('Successfully created README.md!')
-    );
-})
 
-// // TODO: Create a function to initialize app
-// function init() {}
+// TODO: Create a function to initialize app
+function init() {
+    inquirer.prompt(questions)
+    .then(answers => {
+        fs.writeFile('README.md', generateReadme(answers), (err) => 
+        err ? console.log(err) : console.log('Successfully created README.md!')
+        );
+        })     
+    }
 
-// // Function call to initialize app
-// init();
+// Function call to initialize app
+init();
 
 
 
