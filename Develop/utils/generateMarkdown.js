@@ -1,5 +1,5 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// function that returns a license badge based on which license is passed in
+// If there is no license, returns an empty string
 function renderLicenseBadge(license) {
   let badge ="";
 
@@ -18,12 +18,7 @@ function renderLicenseLink(license) {}
 // If there is no license, return an empty string
 function renderLicenseSection(license) {}
 
-// TODO: Create a function to generate markdown for README
-// function generateMarkdown(data) {
-//   return `# ${data.title}
-
-// `;
-// }
+//function to generate markdown for README
 const generateReadme = ({title, description, install, usage, picture, license, credits, test, questions, username, email}) =>
 ` 
 <h1>${title}</h1>\n
@@ -51,5 +46,5 @@ Email: ${email}\n
 If you have any questions regarding this project please contact me at the above listed email and i will get back to you as soon as possible! Thank you.
 `
 ;
-
+// exports gneratereadme 
 module.exports = generateReadme;
