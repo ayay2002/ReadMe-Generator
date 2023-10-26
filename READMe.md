@@ -4,6 +4,7 @@
 <h2>Description</h2>
 This project creates the user a professional README by using inquirer to ask the user questions in the terminal to place content on the page.
 
+![VIDEO](./Walkthrough.mp4)
 
 <h2>Table Of Contents</h2>
 
@@ -18,7 +19,6 @@ This project creates the user a professional README by using inquirer to ask the
 <a href ='#tests'>Tests</a>
 
 <a href='#questions'>Questions</a>
-
 
 
 <h2 id='install'>Installation</h2>
