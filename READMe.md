@@ -11,8 +11,6 @@ This project creates the user a professional README by using inquirer to ask the
 
 <a href='#usage'>Usage</a>
 
-<a href ='#image'>Image</a>
-
 <a href ='#license'>License</a>
 
 <a href ='#contributions'>Contributions</a>
@@ -27,10 +25,6 @@ This project creates the user a professional README by using inquirer to ask the
 Once you clone the repoi onto your computer, run npm install to install packages required to run this project.
 
 <h2 id='usage'>Usage</h2>To run this project type node index.js into your integrated terminal and answer the prompted questions in the terminal.
-
-<h2 id='image'>Image</h2
-
-![image](https://github.com/ayay2002/ReadMe-Generator/blob/main/Develop/2000000053.jpg?raw=true)
 
 <h2 id='license'>License</h2>MIT
 
